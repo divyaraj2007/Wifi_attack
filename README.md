@@ -114,13 +114,6 @@ After simulating attacks, learn how to protect your network:
 - Set a strong and unique Wi-Fi password.
 - Regularly monitor your network for suspicious devices.
 
----
-
-## 🌐 Connect with Me
-
-Follow me on Instagram or support my work by buying me a coffee!
-
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/dannyk_739)
 
 
 ---
