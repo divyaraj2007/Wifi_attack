@@ -29,15 +29,16 @@ def banner():
 
 def menu():
     banner()
-    console.print("[bold yellow]1.[/bold yellow] Scan for networks")
+    console.print("[bold yellow]1.[/bold yellow] Scan for networks (WPA3-aware table)")
     console.print("[bold yellow]2.[/bold yellow] Deauthentication Attack")
     console.print("[bold yellow]3.[/bold yellow] Evil Twin Attack")
     console.print("[bold yellow]4.[/bold yellow] WPA Handshake Capture")
     console.print("[bold yellow]5.[/bold yellow] Crack WPA Handshake")
     console.print("[bold yellow]6.[/bold yellow] Defense Tips")
-    console.print("[bold yellow]7.[/bold yellow] Exit")
-    
-    choice = Prompt.ask("[bold cyan]Select an option[/bold cyan]", choices=["1", "2", "3", "4", "5", "6", "7"])
+    console.print("[bold yellow]7.[/bold yellow] Live scan (raw airodump view)")
+    console.print("[bold yellow]8.[/bold yellow] Exit")
+
+    choice = Prompt.ask("[bold cyan]Select an option[/bold cyan]", choices=["1", "2", "3", "4", "5", "6", "7", "8"])
     return choice
 
 def main():
@@ -52,7 +53,7 @@ def main():
 
             if choice == '1':
                 console.clear()
-                scanner.scan_networks(console)
+                scanner.scan_and_classify(console)
             elif choice == '2':
                 console.clear()
                 attacks.deauth_attack(console)
@@ -69,6 +70,9 @@ def main():
                 console.clear()
                 defense_tips.display_defense_tips(console)
             elif choice == '7':
+                console.clear()
+                scanner.scan_networks(console)
+            elif choice == '8':
                 console.print("[bold green]Exiting...[/bold green]")
                 break
             

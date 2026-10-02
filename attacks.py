@@ -4,6 +4,11 @@ from richtools import run_command_with_privilege
 
 def deauth_attack(console):
     console.print("[bold red]Starting Deauthentication Attack[/bold red]")
+    console.print(
+        "[yellow]Note:[/yellow] deauth relies on unprotected management frames. "
+        "[bold]WPA3[/bold] (and any network with 802.11w / PMF enabled) rejects "
+        "these frames, so the attack will have no effect there."
+    )
     target_bssid = Prompt.ask("Enter target BSSID")
     target_channel = Prompt.ask("Enter target channel")
 
@@ -31,6 +36,13 @@ def evil_twin_attack(console):
 
 def wpa_handshake_capture(console):
     console.print("[bold red]Starting WPA Handshake Capture[/bold red]")
+    console.print(
+        "[yellow]Note:[/yellow] this captures the [bold]WPA/WPA2 4-way "
+        "handshake[/bold]. [bold]WPA3-SAE[/bold] uses a different (Dragonfly/SAE) "
+        "exchange that is not vulnerable to offline capture-and-crack, so this "
+        "only yields a useful result on WPA2-PSK targets. Run option 1 "
+        "(WPA3-aware scan) first to check the target's security."
+    )
     target_bssid = Prompt.ask("Enter target BSSID")
     target_channel = Prompt.ask("Enter target channel")
     output_file = Prompt.ask("Enter output file name (no extension)")
