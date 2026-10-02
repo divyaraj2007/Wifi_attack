@@ -30,8 +30,8 @@ sudo apt-get update && sudo apt-get install aircrack-ng hostapd dnsmasq python3-
 
 #### 2. Clone the Repo
 ```bash
-git clone https://github.com/Danyalkhattak/wifi-attack-tool.git
-cd wifi-attack-tool
+git clone https://github.com/divyaraj2007/Wifi_attack.git
+cd Wifi_attack
 ```
 
 #### 3. Install Python Dependencies
@@ -60,8 +60,8 @@ pkg install aircrack-ng python3 tsu
 
 #### 2. Clone the Repo
 ```bash
-git clone https://github.com/Danyalkhattak/wifi-attack-tool.git
-cd wifi-attack-tool
+git clone https://github.com/divyaraj2007/Wifi_attack.git
+cd Wifi_attack
 ```
 
 #### 3. Install Python Dependencies
